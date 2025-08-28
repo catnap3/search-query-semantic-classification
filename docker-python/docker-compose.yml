@@ -1,0 +1,50 @@
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python3'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./opt:/root/opt
+
+# ターミナルで docker compose up -d --build
+
+# 以下、実行結果
+# WARN[0000] /Users/kuribayashiraiki/search-query-semantic-classification/docker-python/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+#1 [internal] load local bake definitions
+#1 reading from stdin 617B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 391B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python3:latest
+#3 ...
+
+#4 [auth] library/python3:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python3:latest
+#3 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+# ------
+#  > [internal] load metadata for docker.io/library/python3:latest:
+# ------
+# Dockerfile:1
+
+# --------------------
+
+#    1 | >>> FROM python3
+
+#    2 |     USER root
+
+#    3 |
+
+# --------------------
+
+# failed to solve: python3: failed to resolve source metadata for docker.io/library/python3:latest: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+
+
+
+# View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/m5ajggrivbv5ihn033az803zg
