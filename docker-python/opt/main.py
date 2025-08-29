@@ -1,9 +1,12 @@
-import math
-import sys
 
-def main():
-  val = float(sys.argv[1])
-  print(math.radians(val))
 
-if __name__ == "__main__":
-  main()
+# これはサンプル。コンテナ上で正常に実行できるか確認するときに手軽に使える
+# import math
+# import sys
+
+# def main():
+#   val = float(sys.argv[1])
+#   print(math.radians(val))
+
+# if __name__ == "__main__":
+#   main()
